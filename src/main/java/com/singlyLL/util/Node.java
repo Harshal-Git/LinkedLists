@@ -1,26 +1,26 @@
 /**
  * 
  */
-package com.util;
+package com.singlyLL.util;
 
 import java.util.Objects;
 
 /**
  * @author Harshal-Git
  *
- *	-> Integer type of Node for a linked list 
+ *	-> Node for singly linked list 
  */
-public class NodeInt {
+public class Node {
 
 	private int value;
 	
-	private NodeInt nextPtr;
+	private Node nextPtr;
 	
 	/**
 	 * @param val - node value to  assign
 	 * <br/><b>nextPtr</b> will be NULL by default
 	 */
-	public NodeInt(int val) {
+	public Node(int val) {
 		setValue(val);
 		setNext(null);
 	}
@@ -42,14 +42,14 @@ public class NodeInt {
 	/**
 	 * @return the nextPtr
 	 */
-	public NodeInt getNext() {
+	public Node getNext() {
 		return nextPtr;
 	}
 
 	/**
 	 * @param nextPtr the nextPtr to set
 	 */
-	public void setNext(NodeInt nextPtr) {
+	public void setNext(Node nextPtr) {
 		this.nextPtr = nextPtr;
 	}
 
@@ -66,7 +66,7 @@ public class NodeInt {
 		if(obj == null) {
 			return false;
 		}
-		NodeInt node = ((NodeInt) obj);
+		Node node = ((Node) obj);
 		return (this.getValue() == node.getValue());
 	}
 }

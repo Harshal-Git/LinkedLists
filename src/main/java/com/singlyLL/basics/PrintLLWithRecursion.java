@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.basics;
+package com.singlyLL.basics;
 
-import com.util.NodeInt;
+import com.singlyLL.util.Node;
 
 /**
  * @author Harshal-Git
@@ -20,10 +20,10 @@ public class PrintLLWithRecursion {
 	public static void main(String[] args) {
 
 		// linked list node preparation
-		NodeInt head = new NodeInt(10);
-		NodeInt n1 = new NodeInt(20);
-		NodeInt n2 = new NodeInt(30);
-		NodeInt n3 = new NodeInt(40);
+		Node head = new Node(10);
+		Node n1 = new Node(20);
+		Node n2 = new Node(30);
+		Node n3 = new Node(40);
 
 		// pointer assignment
 		head.setNext(n1);
@@ -46,7 +46,7 @@ public class PrintLLWithRecursion {
 	/**
 	 * @param head - root element of the linked list
 	 */
-	private static void printLLRecursive(NodeInt head) {
+	private static void printLLRecursive(Node head) {
 		if(head == null) {
 			return;
 		} else {

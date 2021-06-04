@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.basics;
+package com.singlyLL.basics;
 
-import com.util.IntLLUtils;
-import com.util.NodeInt;
+import com.singlyLL.util.SinglyLLUtils;
+import com.singlyLL.util.Node;
 
 /**
  * @author Harshal-Git
@@ -42,13 +42,13 @@ public class InsertAtStart {
 			currentSize = existingValues.length;
 		}
 		// prepare linked list
-		NodeInt head = null;
+		Node head = null;
 		for(int index = 0; index < currentSize; index++) {
-			head = IntLLUtils.insertAtStart(head, existingValues[index]);
+			head = SinglyLLUtils.insertAtStart(head, existingValues[index]);
 		}
-		System.out.println("\nExisting Linked list: "+IntLLUtils.printLL(head));
+		System.out.println("\nExisting Linked list: "+SinglyLLUtils.printLL(head));
 		System.out.println("New value insertion at head : "+newVal);
-		head = IntLLUtils.insertAtStart(head, newVal);
-		System.out.println("New Linked list: "+IntLLUtils.printLL(head));		
+		head = SinglyLLUtils.insertAtStart(head, newVal);
+		System.out.println("New Linked list: "+SinglyLLUtils.printLL(head));		
 	}
 }
