@@ -69,4 +69,9 @@ public class Node {
 		Node node = ((Node) obj);
 		return (this.getValue() == node.getValue());
 	}
+	
+	@Override
+	public String toString() {
+		return String.valueOf(this.getValue());
+	}
 }

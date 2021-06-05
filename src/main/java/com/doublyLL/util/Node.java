@@ -13,11 +13,11 @@ import java.util.Objects;
 public class Node {
 
 	private int value;
-	
+
 	private Node previousPtr;
-	
+
 	private Node nextPtr;
-	
+
 	/**
 	 * @param value - value of the node
 	 */
@@ -66,7 +66,7 @@ public class Node {
 	public void setNext(Node next) {
 		this.nextPtr = next;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(previousPtr, nextPtr, value);
@@ -82,5 +82,10 @@ public class Node {
 		}
 		Node node = ((Node) obj);
 		return (this.getValue() == node.getValue());
+	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(this.getValue());
 	}
 }
