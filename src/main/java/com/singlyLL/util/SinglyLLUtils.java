@@ -6,7 +6,7 @@ package com.singlyLL.util;
 /**
  * @author Harshal-Git
  *
- *	Linked list utility methods 
+ * -> Singly linked list utility methods
  */
 public final class SinglyLLUtils {
 
