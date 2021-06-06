@@ -47,7 +47,7 @@ public class InsertAtStart {
 			head = SinglyLLUtils.insertAtStart(head, existingValues[index]);
 		}
 		System.out.println("\nExisting Linked list: "+SinglyLLUtils.printLL(head));
-		System.out.println("New value insertion at head : "+newVal);
+		System.out.println("New value insertion at start : "+newVal);
 		head = SinglyLLUtils.insertAtStart(head, newVal);
 		System.out.println("New Linked list: "+SinglyLLUtils.printLL(head));		
 	}
