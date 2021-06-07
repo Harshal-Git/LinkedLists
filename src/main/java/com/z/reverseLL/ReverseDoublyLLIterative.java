@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.doublyLL.basics;
+package com.z.reverseLL;
 
 import com.doublyLL.util.DoublyLLUtils;
 import com.doublyLL.util.Node;
@@ -15,7 +15,7 @@ import com.doublyLL.util.Node;
  * -> Space complexity:	0(n)
  * -> Auxiliary space:  0(1)
  */
-public class ReverseDoublyLL {
+public class ReverseDoublyLLIterative {
 
 	/**
 	 * @param args

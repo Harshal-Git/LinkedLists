@@ -152,4 +152,42 @@ public class CircularLLUtils {
 		// return updated head
 		return head;
 	}
+	
+	/**
+	 * method to delete node from given position
+	 * @param head - head of the linked list
+	 * @param position - position from which node needs to be deleted starting from 'head'
+	 * <br/> Here position <= total number of nodes
+	 * @return - updated linked list with node removed from 'position'
+	 * <br/>-> Time complexity: 0(n)	
+	 * <br/>-> Space complexity: 0(n)	
+	 * <br/>-> Auxiliary space: 0(1)
+	 */
+	public static Node deleteFromPosition(Node head, int position) {
+		// input validation
+		if(position < 1) {
+			throw new IllegalArgumentException("Invalid position provided for delete: "+position);
+		}
+		// if list is empty OR only one element is present in the list
+		if(head == null || (head.getNext() == head)) {
+			return null;
+		}
+		// if position is 1; efficiently delete from start  
+		if(position == 1) {
+			return deleteFromStart(head);
+		}
+		// for any other position; find the node
+		// before the actual node to be deleted 
+		// and update it's pointer
+		int k = 1;
+		Node current = head;
+		while(k != (position-1)) {
+			current = current.getNext();
+			k++;
+		}
+		// reset pointers of nodes
+		current.setNext(current.getNext().getNext());
+		// return the updated head
+		return head;
+	}
 }
