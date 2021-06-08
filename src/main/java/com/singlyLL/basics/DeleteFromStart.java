@@ -3,8 +3,8 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.SinglyLLUtils;
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -19,16 +19,16 @@ public class DeleteFromStart {
 	public static void main(String[] args) {
 
 		// case 1
-		printMessage(SinglyLLUtils.prepareLL(new int[] {10, 20, 30}));
+		printMessage(SinglyLLUtil.prepareLL(new int[] {10, 20, 30}));
 
 		// case 2
-		printMessage(SinglyLLUtils.prepareLL(new int[] {10, 30}));
+		printMessage(SinglyLLUtil.prepareLL(new int[] {10, 30}));
 
 		// case 3
-		printMessage(SinglyLLUtils.prepareLL(new int[] {10}));
+		printMessage(SinglyLLUtil.prepareLL(new int[] {10}));
 		
 		// case 4
-		printMessage(SinglyLLUtils.prepareLL(null));
+		printMessage(SinglyLLUtil.prepareLL(null));
 	}
 
 	/**
@@ -36,9 +36,9 @@ public class DeleteFromStart {
 	 * @param nodeInt
 	 */
 	private static void printMessage(Node head) {
-		System.out.println("\nExisting linked list: "+SinglyLLUtils.printLL(head));
-		head = SinglyLLUtils.deleteFromStart(head);
-		System.out.println("Updated linked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("\nExisting linked list: "+SinglyLLUtil.printLL(head));
+		head = SinglyLLUtil.deleteFromStart(head);
+		System.out.println("Updated linked list: "+SinglyLLUtil.printLL(head));
 	}
 
 }

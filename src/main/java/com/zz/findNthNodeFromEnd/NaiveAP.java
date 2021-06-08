@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.z.findNthNodeFromEnd;
+package com.zz.findNthNodeFromEnd;
 
-import com.singlyLL.util.Node;
-import com.singlyLL.util.SinglyLLUtils;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -56,8 +56,8 @@ public class NaiveAP {
 	 */
 	private static void printMessage(int[] elements, int n) {
 		Node head = null;
-		head = SinglyLLUtils.prepareLL(elements);
-		System.out.println("\nLinked list: "+SinglyLLUtils.printLL(head));
+		head = SinglyLLUtil.prepareLL(elements);
+		System.out.println("\nLinked list: "+SinglyLLUtil.printLL(head));
 		System.out.println(n+"th element from the end of the list = "+findNthElementFromList(head, n));
 	}
 

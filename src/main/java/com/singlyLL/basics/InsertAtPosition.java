@@ -3,8 +3,8 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.SinglyLLUtils;
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -44,13 +44,13 @@ public class InsertAtPosition {
 	 */
 	private static void printMessage(int[] llElements, int newValue, int position) {
 		// prepare linked list
-		Node head = SinglyLLUtils.prepareLL(llElements);
-		System.out.println("\nCurrent linked list: "+SinglyLLUtils.printLL(head));
+		Node head = SinglyLLUtil.prepareLL(llElements);
+		System.out.println("\nCurrent linked list: "+SinglyLLUtil.printLL(head));
 		System.out.println("New element = "+newValue+" to be inserted at position: "+position);
 		// insert element
-		head = SinglyLLUtils.insertAtPosition(head, newValue, position);
+		head = SinglyLLUtil.insertAtPosition(head, newValue, position);
 		// print updated list
-		System.out.println("Updated linked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("Updated linked list: "+SinglyLLUtil.printLL(head));
 	}
 
 }

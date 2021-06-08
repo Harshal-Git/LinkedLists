@@ -3,8 +3,8 @@
  */
 package com.circularLL.basics;
 
-import com.circularLL.util.CircularLLUtils;
-import com.circularLL.util.Node;
+import com.aa.utils.CircularLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -50,11 +50,11 @@ public class InsertAtEndNaive {
 		// prepare linked list
 		Node head = null;
 		for(int index = 0; index < currentSize; index++) {
-			head = CircularLLUtils.insertAtEnd(head, existingValues[index]);
+			head = CircularLLUtil.insertAtEnd(head, existingValues[index]);
 		}
-		System.out.println("\nExisting Linked list: "+CircularLLUtils.printCLL(head));
+		System.out.println("\nExisting Linked list: "+CircularLLUtil.printLL(head));
 		System.out.println("New value insertion at end : "+newVal);
-		head = CircularLLUtils.insertAtEnd(head, newVal);
-		System.out.println("New Linked list: "+CircularLLUtils.printCLL(head));		
+		head = CircularLLUtil.insertAtEnd(head, newVal);
+		System.out.println("New Linked list: "+CircularLLUtil.printLL(head));		
 	}
 }

@@ -3,8 +3,8 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.SinglyLLUtils;
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -50,8 +50,8 @@ public class SearchInLLIt {
 	 * @param searchKey
 	 */
 	private static void printMessage(int[] elements, int searchKey) {
-		Node head = SinglyLLUtils.prepareLL(elements);
-		System.out.println("\nLinked list: "+SinglyLLUtils.printLL(head));
+		Node head = SinglyLLUtil.prepareLL(elements);
+		System.out.println("\nLinked list: "+SinglyLLUtil.printLL(head));
 		int pos = findKeyPositionIT(head, searchKey);
 		if(pos > 0) {
 			System.out.println("Search key: "+searchKey+" found at position "+pos+".");

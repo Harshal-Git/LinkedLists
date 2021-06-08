@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.doublyLL.util;
+package com.aa.utils;
 
 import java.util.Objects;
 
 /**
  * @author Harshal-Git
  *
- *	-> Node for doubly linked list
+ *	-> Standard Node for linked list (can be converted into Singly / Doubly / Circular)
  */
 public class Node {
 
@@ -69,7 +69,7 @@ public class Node {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(previousPtr, nextPtr, value);
+		return Objects.hash(value);
 	}
 
 	/**

@@ -3,8 +3,8 @@
  */
 package com.circularLL.basics;
 
-import com.circularLL.util.CircularLLUtils;
-import com.circularLL.util.Node;
+import com.aa.utils.CircularLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -19,28 +19,28 @@ public class DeleteFromStartNaive {
 	public static void main(String[] args) {
 
 		// case 1
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10, 20, 30}));
+		printMessage(CircularLLUtil.prepareLL(new int[] {10, 20, 30}));
 
 		// case 2
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10, 30}));
+		printMessage(CircularLLUtil.prepareLL(new int[] {10, 30}));
 
 		// case 3
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10}));
+		printMessage(CircularLLUtil.prepareLL(new int[] {10}));
 
 		// case 4
-		printMessage(CircularLLUtils.prepareCLL(null));
+		printMessage(CircularLLUtil.prepareLL(null));
 		
 		// case 5
-		printMessage(CircularLLUtils.prepareCLL(new int[] {5, 4, 3, 2, 1}));
+		printMessage(CircularLLUtil.prepareLL(new int[] {5, 4, 3, 2, 1}));
 	}
 
 	/**
 	 * @param head
 	 */
 	private static void printMessage(Node head) {
-		System.out.println("\nExisting linked list: "+CircularLLUtils.printCLL(head));
-		head = CircularLLUtils.deleteFromStart(head);
-		System.out.println("Updated linked list: "+CircularLLUtils.printCLL(head));
+		System.out.println("\nExisting linked list: "+CircularLLUtil.printLL(head));
+		head = CircularLLUtil.deleteFromStart(head);
+		System.out.println("Updated linked list: "+CircularLLUtil.printLL(head));
 	}
 
 }

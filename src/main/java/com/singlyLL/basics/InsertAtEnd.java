@@ -3,8 +3,8 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.SinglyLLUtils;
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -43,11 +43,11 @@ public class InsertAtEnd {
 		// prepare linked list
 		Node head = null;
 		for(int index = 0; index < currentSize; index++) {
-			head = SinglyLLUtils.insertAtEnd(head, existingValues[index]);
+			head = SinglyLLUtil.insertAtEnd(head, existingValues[index]);
 		}
-		System.out.println("\nExisting Linked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("\nExisting Linked list: "+SinglyLLUtil.printLL(head));
 		System.out.println("New value insertion at end : "+newVal);
-		head = SinglyLLUtils.insertAtEnd(head, newVal);
-		System.out.println("New Linked list: "+SinglyLLUtils.printLL(head));		
+		head = SinglyLLUtil.insertAtEnd(head, newVal);
+		System.out.println("New Linked list: "+SinglyLLUtil.printLL(head));		
 	}
 }

@@ -3,8 +3,8 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.SinglyLLUtils;
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -32,12 +32,12 @@ public class PrintLLWithIteration {
 		n2.setNext(n3);
 
 		// print linked list
-		System.out.print("Linked list data 1: "+SinglyLLUtils.printLL(head));
+		System.out.print("Linked list data 1: "+SinglyLLUtil.printLL(head));
 
 		// print some intermediate node
-		System.out.print("\nLinked list data 2: "+SinglyLLUtils.printLL(n2));
+		System.out.print("\nLinked list data 2: "+SinglyLLUtil.printLL(n2));
 
 		// print 'null'
-		System.out.print("\nLinked list data 3: "+SinglyLLUtils.printLL(null));
+		System.out.print("\nLinked list data 3: "+SinglyLLUtil.printLL(null));
 	}
 }

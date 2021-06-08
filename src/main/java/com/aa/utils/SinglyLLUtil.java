@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.singlyLL.util;
+package com.aa.utils;
 
 /**
  * @author Harshal-Git
  *
  * -> Singly linked list utility methods
  */
-public final class SinglyLLUtils {
+public final class SinglyLLUtil {
 
 	/**
 	 * method to prepare a linked list with given values

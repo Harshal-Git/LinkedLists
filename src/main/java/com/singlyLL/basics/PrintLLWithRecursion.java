@@ -3,7 +3,7 @@
  */
 package com.singlyLL.basics;
 
-import com.singlyLL.util.Node;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git

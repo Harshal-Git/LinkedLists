@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.z.reverseLL;
+package com.zz.reverseLL;
 
-import com.doublyLL.util.DoublyLLUtils;
-import com.doublyLL.util.Node;
+import com.aa.utils.DoublyLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -15,7 +15,7 @@ import com.doublyLL.util.Node;
  * -> Space complexity:	0(n)
  * -> Auxiliary space:  0(1)
  */
-public class ReverseDoublyLLIterative {
+public class ReverseDLLIterative {
 
 	/**
 	 * @param args
@@ -42,10 +42,10 @@ public class ReverseDoublyLLIterative {
 	 * @param elements
 	 */
 	private static void printMessage(int[] elements) {
-		Node head = DoublyLLUtils.prepareLL(elements);
-		System.out.println("\nLinked list: "+DoublyLLUtils.printLL(head));
+		Node head = DoublyLLUtil.prepareLL(elements);
+		System.out.println("\nLinked list: "+DoublyLLUtil.printLL(head));
 		head = reverseLL(head);
-		System.out.println("Reversed linked list: "+DoublyLLUtils.printLL(head));
+		System.out.println("Reversed linked list: "+DoublyLLUtil.printLL(head));
 	}
 
 	/**

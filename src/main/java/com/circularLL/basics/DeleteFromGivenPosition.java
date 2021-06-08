@@ -3,8 +3,8 @@
  */
 package com.circularLL.basics;
 
-import com.circularLL.util.CircularLLUtils;
-import com.circularLL.util.Node;
+import com.aa.utils.CircularLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -18,22 +18,22 @@ public class DeleteFromGivenPosition {
 	public static void main(String[] args) {
 
 		// case 1
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10, 20, 30}), 2);
+		printMessage(CircularLLUtil.prepareLL(new int[] {10, 20, 30}), 2);
 
 		// case 2
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10, 30}), 2);
+		printMessage(CircularLLUtil.prepareLL(new int[] {10, 30}), 2);
 
 		// case 3
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10}), 1);
+		printMessage(CircularLLUtil.prepareLL(new int[] {10}), 1);
 
 		// case 4
-		printMessage(CircularLLUtils.prepareCLL(null), 5);
+		printMessage(CircularLLUtil.prepareLL(null), 5);
 		
 		// case 5
-		printMessage(CircularLLUtils.prepareCLL(new int[] {5, 4, 3, 2, 1}), 5);
+		printMessage(CircularLLUtil.prepareLL(new int[] {5, 4, 3, 2, 1}), 5);
 
 		// case 6
-		printMessage(CircularLLUtils.prepareCLL(new int[] {10, 20, 30, 40}), 1);
+		printMessage(CircularLLUtil.prepareLL(new int[] {10, 20, 30, 40}), 1);
 	}
 
 	/**
@@ -42,9 +42,9 @@ public class DeleteFromGivenPosition {
 	 * @param k
 	 */
 	private static void printMessage(Node head, int k) {
-		System.out.println("\nExisting linked list: "+CircularLLUtils.printCLL(head));
+		System.out.println("\nExisting linked list: "+CircularLLUtil.printLL(head));
 		System.out.println("Delete node from position: "+k);
-		head = CircularLLUtils.deleteFromPosition(head, k);
-		System.out.println("Updated linked list: "+CircularLLUtils.printCLL(head));
+		head = CircularLLUtil.deleteFromPosition(head, k);
+		System.out.println("Updated linked list: "+CircularLLUtil.printLL(head));
 	}
 }

@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.z.sortedInsert;
+package com.zz.sortedInsert;
 
-import com.singlyLL.util.Node;
-import com.singlyLL.util.SinglyLLUtils;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -33,23 +33,23 @@ public class StandardAP {
 		Node head = null;
 
 		// case 1
-		head = SinglyLLUtils.prepareLL(new int[] {10, 20, 30, 40});
+		head = SinglyLLUtil.prepareLL(new int[] {10, 20, 30, 40});
 		printMessage(head, 25);
 
 		// case 2
-		head = SinglyLLUtils.prepareLL(new int[] {10, 25});
+		head = SinglyLLUtil.prepareLL(new int[] {10, 25});
 		printMessage(head, 5);
 
 		// case 3
-		head = SinglyLLUtils.prepareLL(new int[] {10, 20});
+		head = SinglyLLUtil.prepareLL(new int[] {10, 20});
 		printMessage(head, 30);
 
 		// case 4
-		head = SinglyLLUtils.prepareLL(null);
+		head = SinglyLLUtil.prepareLL(null);
 		printMessage(head, 10);
 
 		// case 5
-		head = SinglyLLUtils.prepareLL(new int[] {10, 20, 30, 40, 50});
+		head = SinglyLLUtil.prepareLL(new int[] {10, 20, 30, 40, 50});
 		printMessage(head, 45);
 	}
 
@@ -58,10 +58,10 @@ public class StandardAP {
 	 * @param newVal
 	 */
 	private static void printMessage(Node head, int newVal) {
-		System.out.println("\nLinked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("\nLinked list: "+SinglyLLUtil.printLL(head));
 		System.out.println("New element insertion: "+newVal);
 		head = insertSorted(head, newVal);
-		System.out.println("Updated linked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("Updated linked list: "+SinglyLLUtil.printLL(head));
 	}
 
 	/**

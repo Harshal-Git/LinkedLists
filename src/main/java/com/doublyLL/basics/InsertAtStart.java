@@ -3,8 +3,8 @@
  */
 package com.doublyLL.basics;
 
-import com.doublyLL.util.DoublyLLUtils;
-import com.doublyLL.util.Node;
+import com.aa.utils.DoublyLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -44,11 +44,11 @@ public class InsertAtStart {
 		// prepare linked list
 		Node head = null;
 		for(int index = 0; index < currentSize; index++) {
-			head = DoublyLLUtils.insertAtStart(head, existingValues[index]);
+			head = DoublyLLUtil.insertAtStart(head, existingValues[index]);
 		}
-		System.out.println("\nExisting Linked list: "+DoublyLLUtils.printLL(head));
+		System.out.println("\nExisting Linked list: "+DoublyLLUtil.printLL(head));
 		System.out.println("New value insertion at start : "+newVal);
-		head = DoublyLLUtils.insertAtStart(head, newVal);
-		System.out.println("New Linked list: "+DoublyLLUtils.printLL(head));		
+		head = DoublyLLUtil.insertAtStart(head, newVal);
+		System.out.println("New Linked list: "+DoublyLLUtil.printLL(head));		
 	}
 }

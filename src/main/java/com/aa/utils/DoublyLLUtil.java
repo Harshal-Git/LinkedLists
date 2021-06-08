@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.doublyLL.util;
+package com.aa.utils;
 
 /**
  * @author Harshal-Git
  *
  * -> Doubly linked list utility methods
  */
-public class DoublyLLUtils {
+public class DoublyLLUtil {
 
 	/**
 	 * method to prepare a linked list with given values

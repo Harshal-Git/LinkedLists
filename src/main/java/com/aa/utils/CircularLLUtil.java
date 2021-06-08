@@ -1,21 +1,21 @@
 /**
  * 
  */
-package com.circularLL.util;
+package com.aa.utils;
 
 /**
  * @author Harshal-Git
  *
  * -> Circular linked list utility methods
  */
-public class CircularLLUtils {
+public class CircularLLUtil {	
 
 	/**
 	 * method to prepare a circular linked list
 	 * @param elements - elements to be inserted into the list
 	 * @return - returns a circular linked list with given elements
 	 */
-	public static Node prepareCLL(int [] elements) {
+	public static Node prepareLL(int [] elements) {
 		// if no elements are passed
 		if(elements == null || elements.length < 1) {
 			return null;
@@ -42,7 +42,7 @@ public class CircularLLUtils {
 	 * @param head - head of the linked list
 	 * @return - string representation of the given circular linked list
 	 */
-	public static String printCLL(Node head) {
+	public static String printLL(Node head) {
 		// if head is null
 		if(head == null) {
 			return "EMPTY";

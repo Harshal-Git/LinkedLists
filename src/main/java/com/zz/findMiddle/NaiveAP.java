@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.z.findMiddle;
+package com.zz.findMiddle;
 
-import com.singlyLL.util.Node;
-import com.singlyLL.util.SinglyLLUtils;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -13,13 +13,24 @@ import com.singlyLL.util.SinglyLLUtils;
  *
  *	-> base line : in case of 2 middle nodes, print data for the right most node.
  *
- *	-> Efficient approach : prepare 'slow' & 'fast' pointer and iterate until 'fast' is exhausted. Result will be at 'slow'.  
+ *	-> Naive approach : find length of the linked list (len) & then print the element at (len/2) position.  
  *
- * -> Time complexity: 0(n) 	
+ *	ex:
+ *		i/p: 10 -> 5 -> 20 -> 15 -> 25 		=> o/p: 20
+ *
+ *		i/p: 10 -> 5 -> 20 -> 15 -> 25 -> 30	=> o/p: 15
+ *
+ *		i/p: 10 	=> o/p: 10
+ *
+ *		i/p: null 		=> o/p: BLANK
+ *
+ *		i/p: 10 -> 20 		=> o/p: 20
+ *
+ * -> Time complexity: 0(n) + 0(n/2) ~ 0(n)	
  * -> Space complexity:	0(n)
  * -> Auxiliary space:  0(1)
  */
-public class EfficientAP {
+public class NaiveAP {
 
 	/**
 	 * @param args
@@ -53,8 +64,8 @@ public class EfficientAP {
 	 */
 	private static void printMessage(int[] elements) {
 		Node head = null;
-		head = SinglyLLUtils.prepareLL(elements);
-		System.out.println("\nLinked list: "+SinglyLLUtils.printLL(head));
+		head = SinglyLLUtil.prepareLL(elements);
+		System.out.println("\nLinked list: "+SinglyLLUtil.printLL(head));
 		System.out.println("Middle of the list: "+findMiddleOfList(head));
 	}
 
@@ -69,19 +80,22 @@ public class EfficientAP {
 		if(head == null) {
 			return "";
 		}
-		// prepare slow & fast pointers
-		Node fastPtr = head;
-		Node slowPtr = head;
-		/*
-		 * Moving at double speed; for ODD numbers, fast pointer 
-		 * will reach at last node & for EVEN numbers, fast pointer 
-		 * will go beyond the last node. Both cases are handled.
-		 */
-		while((fastPtr != null) && (fastPtr.getNext() != null)) {
-			slowPtr = slowPtr.getNext();
-			fastPtr = fastPtr.getNext().getNext();
+		// find length of the list
+		int length = 0;
+		Node current = head;
+		while(current != null) {
+			length++;
+			current = current.getNext();
 		}
-		// return the value of slow pointer node
-		return String.valueOf(slowPtr.getValue());
+		// once length is obtained; find middle node
+		current = head;
+		int index = 0;
+		while(index < (length/2)) {
+			current = current.getNext();
+			index++;
+		}
+		// return the value of current node
+		return String.valueOf(current.getValue());
 	}
+
 }

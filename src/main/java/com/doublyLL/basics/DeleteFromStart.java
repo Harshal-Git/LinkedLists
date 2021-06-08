@@ -3,8 +3,8 @@
  */
 package com.doublyLL.basics;
 
-import com.doublyLL.util.DoublyLLUtils;
-import com.doublyLL.util.Node;
+import com.aa.utils.DoublyLLUtil;
+import com.aa.utils.Node;
 
 /**
  * @author Harshal-Git
@@ -19,16 +19,16 @@ public class DeleteFromStart {
 	public static void main(String[] args) {
 
 		// case 1
-		printMessage(DoublyLLUtils.prepareLL(new int[] {10, 20, 30}));
+		printMessage(DoublyLLUtil.prepareLL(new int[] {10, 20, 30}));
 
 		// case 2
-		printMessage(DoublyLLUtils.prepareLL(new int[] {10, 30}));
+		printMessage(DoublyLLUtil.prepareLL(new int[] {10, 30}));
 
 		// case 3
-		printMessage(DoublyLLUtils.prepareLL(new int[] {10}));
+		printMessage(DoublyLLUtil.prepareLL(new int[] {10}));
 		
 		// case 4
-		printMessage(DoublyLLUtils.prepareLL(null));
+		printMessage(DoublyLLUtil.prepareLL(null));
 	}
 
 	/**
@@ -36,9 +36,9 @@ public class DeleteFromStart {
 	 * @param nodeInt
 	 */
 	private static void printMessage(Node head) {
-		System.out.println("\nExisting linked list: "+DoublyLLUtils.printLL(head));
-		head = DoublyLLUtils.deleteFromStart(head);
-		System.out.println("Updated linked list: "+DoublyLLUtils.printLL(head));
+		System.out.println("\nExisting linked list: "+DoublyLLUtil.printLL(head));
+		head = DoublyLLUtil.deleteFromStart(head);
+		System.out.println("Updated linked list: "+DoublyLLUtil.printLL(head));
 	}
 
 }

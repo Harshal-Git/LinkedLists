@@ -1,10 +1,10 @@
 /**
  * 
  */
-package com.z.reverseLL;
+package com.zz.reverseLL;
 
-import com.singlyLL.util.Node;
-import com.singlyLL.util.SinglyLLUtils;
+import com.aa.utils.Node;
+import com.aa.utils.SinglyLLUtil;
 
 /**
  * @author Harshal-Git
@@ -15,7 +15,7 @@ import com.singlyLL.util.SinglyLLUtils;
  * -> Space complexity:	0(n)
  * -> Auxiliary space:  0(1)
  */
-public class ReverseSinglyLLIterative {
+public class ReverseSLLIterative {
 
 	/**
 	 * @param args
@@ -42,10 +42,10 @@ public class ReverseSinglyLLIterative {
 	 * @param elements
 	 */
 	private static void printMessage(int[] elements) {
-		Node head = SinglyLLUtils.prepareLL(elements);
-		System.out.println("\nLinked list: "+SinglyLLUtils.printLL(head));
+		Node head = SinglyLLUtil.prepareLL(elements);
+		System.out.println("\nLinked list: "+SinglyLLUtil.printLL(head));
 		head = reverseLL(head);
-		System.out.println("Reversed linked list: "+SinglyLLUtils.printLL(head));
+		System.out.println("Reversed linked list: "+SinglyLLUtil.printLL(head));
 	}
 
 	/**
