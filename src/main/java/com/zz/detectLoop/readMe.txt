@@ -12,7 +12,19 @@ There are multiple approaches to check whether given linked list has a loop OR n
 				for each node, we will change it's next reference to point to a dummy node IF it's not already pointing to the 
 				dummy node. If it is already pointing to the dummy node; the list has a loop.   [ O(n) ]
 				
-4. Hashing : Using a Hashset to store the visited references and checking whether any node refers to any existing visited node?
+4. Hashing : Using a Hash-set to store the visited references and checking whether any node refers to any existing visited node?
 				 [ O(n) ]
 
-5. 
+5. Floyd cycle detection :  Iterating the given linked list with 2 pointers (fast & slow). Slow moves by 1 & fast moves at double speed.
+							At any moment; if they meet at some point; there exist a loop.
+							
+
+--> Variations of loop detection / loop removal algo
+
+1. Find the length of the loop.	
+	solution : after detecting the loop with Floyd algo; keep one pointer steady and increment other pointer by 1 & record that count.
+				that count will return the length of the loop.  
+
+2. Find the first node of the loop.
+	solution : after detecting the loop with Floyd algo; once we return slow pointer to the start of the loop; increment both by 1 & the 
+				point they meet is first node of the loop.

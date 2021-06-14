@@ -56,7 +56,7 @@ public class CircularLLUtil {
 		do {
 			builder.append(head.getValue()+" -> "); 
 			head = head.getNext();
-		} while(head != root);
+		} while(head != null && head != root);
 		// add an identifier to show it's a circular linked list
 		builder.append("HEAD");
 		// return the builder value

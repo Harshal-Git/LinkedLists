@@ -1,12 +1,12 @@
-# LinkedLists
+#LinkedLists
 Linked lists programs
 
  * -> Time complexity:	
  * -> Space complexity:	
  * -> Auxiliary space:
 
-###
-Types of implementations for Linked list (apart from standard Java implementation):
+
+##Types of implementations for Linked list (apart from standard Java implementation):
 
 1. Doubly linked list
 2. Circular linked list  

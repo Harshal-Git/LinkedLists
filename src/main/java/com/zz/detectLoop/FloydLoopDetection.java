@@ -3,9 +3,6 @@
  */
 package com.zz.detectLoop;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.aa.utils.CircularLLUtil;
 import com.aa.utils.CyclicLLUtil;
 import com.aa.utils.Node;
@@ -14,15 +11,13 @@ import com.aa.utils.SinglyLLUtil;
 /**
  * @author Harshal-Git
  *
- *	-> Given a linked list; find whether it has a loop OR not.
+ *	-> Identify whether a loop exist in the given linked list.
  *
- *	-> This is hashing approach
- *
- * -> Time complexity: O(n)	
- * -> Space complexity: O(n)	
- * -> Auxiliary space: O(n)
+ * -> Time complexity:	O(m + n) [m  - elements which are not part of the loop / n - elements part of the loop]
+ * -> Space complexity:	O(n)
+ * -> Auxiliary space: 0(1)
  */
-public class HashingMethod {
+public class FloydLoopDetection {
 
 	/**
 	 * @param args
@@ -37,7 +32,7 @@ public class HashingMethod {
 		Node head2 = CircularLLUtil.prepareLL(new int[] {1, 2, 3, 4, 5});
 		System.out.println("\nLinked list: "+CircularLLUtil.printLL(head2)+" : has any loop? "+findLoop(head2));
 		
-		// case 3 - custom cyclic loop
+		// case 3 - custom cyclic linked list
 		Node head3 = CyclicLLUtil.getCyclicLoopLL();
 		System.out.println("\nLinked list: "+CyclicLLUtil.getCyclicLLString()+" : has any loop? "+findLoop(head3));
 	}
@@ -48,24 +43,30 @@ public class HashingMethod {
 	 * @return - Yes - if loop exist; No otherwise
 	 */
 	private static String findLoop(Node head) {
-		// loop flag
-		boolean hasLoop = false;
-		// maintain a hash set of Nodes
-		Set<Node> visitedNodes = new HashSet<Node>();
-		// iterate over list
-		Node current = head;
-		while(current != null) {
-			// if current node already exist in visited nodes; there is a loop
-			if(visitedNodes.contains(current)) {
-				hasLoop=true;
-				break;
-			} else {
-				// otherwise add reference of current node in the set and move ahead
-				visitedNodes.add(current);
-			}
-			current = current.getNext();
+		// head validation
+		if(head == null || head.getNext() == null) {
+			return "No";
 		}
-		// return flag
-		return ((hasLoop)? "Yes" : "No");
+		// single node circular linked list
+		if(head.getNext() == head) {
+			return "Yes";
+		}
+		// prepare 2 pointers
+		Node fastPtr = head;
+		Node slowPtr = head;
+		// iterate through all nodes
+		while(fastPtr != null && fastPtr.getNext() != null) {
+			// slow pointer by 1 position
+			slowPtr = slowPtr.getNext();
+			// fast pointer by 2 positions
+			fastPtr = fastPtr.getNext().getNext();
+			// if at any moment; they meet; means there is a loop
+			if(slowPtr == fastPtr) {
+				return "Yes";
+			}
+		}
+		// default return
+		return "No";
 	}
+
 }
