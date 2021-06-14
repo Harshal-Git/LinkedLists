@@ -35,7 +35,7 @@ public class Node {
 	/**
 	 * @param value the value to set
 	 */
-	private void setValue(int value) {
+	public void setValue(int value) {
 		this.value = value;
 	}
 
