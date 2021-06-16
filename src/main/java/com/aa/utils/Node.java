@@ -86,6 +86,18 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return String.valueOf(this.getValue());
+		StringBuilder builder = new StringBuilder();
+		if(this.previousPtr != null) {
+			builder.append(this.previousPtr.getValue());	
+		} else {
+			builder.append(this.previousPtr);
+		}
+		builder.append("-").append(this.value).append("-");
+		if(this.nextPtr != null) {
+			builder.append(this.nextPtr.getValue());
+		} else {
+			builder.append(this.nextPtr);	
+		}
+		return builder.toString();
 	}
 }
