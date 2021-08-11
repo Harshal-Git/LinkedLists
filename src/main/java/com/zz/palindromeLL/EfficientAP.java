@@ -68,7 +68,7 @@ public class EfficientAP {
 		if(head == null || head.getNext() == null) {
 			return "No";
 		}
-		// find middle
+		// find middle (n/2 OR (n/2)+1)
 		Node slowPtr = head;
 		Node fastPtr = head;
 		while(fastPtr.getNext() != null && 

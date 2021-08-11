@@ -80,7 +80,11 @@ public class EfficientAP {
 		Node evenHead = null, oddHead = null, tempNode = null;
 		Node currentNode = head;
 		while(currentNode != null) {
+			
+			// either prepare for a fresh node OR reset the current node references
+			// but resetting references will lose future nodes
 			tempNode = new Node(currentNode.getValue());
+			
 			// check for EVEN
 			if(isEven(tempNode.getValue())) {
 				// if EVEN list is empty
@@ -104,6 +108,7 @@ public class EfficientAP {
 				// move pointer ahead
 				oddNodes = tempNode;
 			}
+			
 			// process next node
 			currentNode = currentNode.getNext();
 		}

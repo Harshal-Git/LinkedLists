@@ -12,8 +12,11 @@ import com.aa.utils.SinglyLLUtil;
  *	-> Delete given node from given singly linked list without it's head given. The node needs to be deleted; 
  *		will be given in the input.
  *
- *	-> Base line : node to be deleted will never be the last node. Condition : we must be allowed to change the value of given node.
- *		As we don't have previous node data; with this approach; last node deletion will not work.
+ *	-> Approach : Set next node data & pointer reference to current node. 
+ *
+ *	-> Base line : We must be allowed to change the value of given node.
+ * 
+ *	-> Condition : As we don't have previous node data; with this approach; last node deletion will not work.
  *
  * -> Time complexity: 0(1)	
  * -> Space complexity: 0(1)	
@@ -62,8 +65,8 @@ public class StandardAP {
 		if(deleteNode == null) {
 			return;
 		}
-		// copy data of next node to current node
-		// 
+		
+		// copy data & reference of next node to current node
 		deleteNode.setValue(deleteNode.getNext().getValue());
 		deleteNode.setNext(deleteNode.getNext().getNext());
 	}
