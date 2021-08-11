@@ -59,17 +59,17 @@ public class ReverseSLLIterative {
 		}
 		//  initializations
 		Node current = head;
-		Node prev = null, temp = null;
+		Node prev = null, next = null;
 		// move till the last node
 		while(current != null) {
 			// next node of current pointer
-			temp = current.getNext();
+			next = current.getNext();
 			// set reference of previous to current
 			current.setNext(prev);
 			// set previous as current 
 			prev = current;
 			// move to temp reference to go ahead
-			current = temp;
+			current = next;
 		}
 		// update the head as last node
 		head = prev;

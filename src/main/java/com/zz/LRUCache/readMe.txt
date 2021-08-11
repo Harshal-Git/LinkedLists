@@ -4,10 +4,11 @@ LRU cache (Least Recently Used cache)
 
 1. Defined cache size in advance. And provided sequence of entries to be validated against the cache.
 
-2. When it's a cache miss (entry not found present in cache); the entry will be added in the cache at front. 
+2. When it's a cache miss (entry not found present in cache); the new entry will be added in the cache at front. 
 	And remaining element (if exist) will be shifted towards end.   
 
-3. When it's a cache hit (entry found in the cache); it will come in front in the cache; and elements are rearranged.
+3. When it's a cache hit (entry found in the cache); existing entry will come in front in the cache; and remaining elements 
+	are rearranged.
 
 4. When cache is full; and new entry miss the cache, the last element; which has not been used recently (least recently used) 
 	will be removed from cache.
